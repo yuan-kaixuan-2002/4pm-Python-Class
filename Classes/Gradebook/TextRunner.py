@@ -25,7 +25,6 @@ while(True):
         classrooms.append(Classroom(temp))
     elif(mode1 == "2"):
         temp = input("Enter the name of the class")
-        selectedClass = None
         for c in classrooms:
             if(c.getName()== temp):
                 classTasks(c)
