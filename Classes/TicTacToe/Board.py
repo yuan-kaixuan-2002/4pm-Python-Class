@@ -6,17 +6,29 @@ class Board:
              [" "," "," "],
              [" "," ",""]]
 
+
     def printBoard(self):
         b = self.board
 
 
         print("   1   2   3")
-        print("a|",b[0][0],"|",b[0][1],"|",b[0][2],"|")
-        print("b|",b[1][0],"|",b[1][1],"|",b[1][2],"|")
-        print("c|",b[2][0],"|",b[2][1],"|",b[2][2],"|")
+        print("1|",b[0][0],"|",b[0][1],"|",b[0][2],"|")
+        print("2|",b[1][0],"|",b[1][1],"|",b[1][2],"|")
+        print("3|",b[2][0],"|",b[2][1],"|",b[2][2],"|")
 
 
 
+    def makeMove(self, row,col,player):
+        if(self.checkMove(row,col)== True):
+            self.board[row][col]= player
+
+
+    def checkMove(self, row, col):
+        if(self.board[row][col] == " "):
+            return True
+        else:
+            return False
+        
 
     def checkWin(self):
         b = self.board
@@ -46,10 +58,3 @@ class Board:
                 return 2
 
         return 0
-
-
-
-
-
-
-
