@@ -13,18 +13,18 @@ while(True):
             break
 
     board.printBoard()
-    if(board.checkWin()==1):
+    if(board.checkWin()== 1):
         print("Player X wins!")
         break
 
     while(True):
-        pyr = (int)(input("Choose a row, Player Y:"))
-        pyc = (int)(input("Choose a column, Player Y:"))
+        pyr = (int)(input("Choose a row, Player O:"))
+        pyc = (int)(input("Choose a column, Player O:"))
         if(board.checkMove(pyr,pyc)==True):
-            board.makeMove(pyr,pyc,"y")
+            board.makeMove(pyr,pyc,"o")
             break
 
     board.printBoard()
     if(board.checkWin()==1):
-        print("Player Y wins!")
+        print("Player O wins!")
         break
